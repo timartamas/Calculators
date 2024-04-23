@@ -1,14 +1,14 @@
-function myFunction() {
-    // Get the text field
-    var copyText = document.getElementById("content");
-  
-    // Select the text field
-    // copyText.select();
-    // copyText.setSelectionRange(0, 99999); // For mobile devices
-  
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText.textContent);
-    
-    // Alert the copied text
-    alert("Copied the text");
-  }
+const copyBtn = document.getElementById("button")
+const textBox = document.getElementById("textBox")
+
+copyBtn.addEventListener("click", () => {
+    const copyText = document.getElementById("content").textContent;
+
+    navigator.clipboard.writeText(copyText);
+
+    textBox.textContent = "Copied to clipboard!"
+
+    setTimeout(() => {
+        textBox.textContent=""
+    },3000)
+})

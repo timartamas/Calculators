@@ -22,3 +22,8 @@ body{
 #content{
     font-size:15px;
 }
+
+#button-div{
+    display:flex;
+    flex-direction:row;
+}
